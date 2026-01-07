@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "poppins";
+}
+
+/* App.css */
+
+:root {
+    --deg: 1;
+    --x: -50%;
+    --y: -50%;
+    --speed: 150ms;
+  }
+  
+  @keyframes wobble {
+    to {
+      filter: hue-rotate(360deg);
+      transform: translate(var(--x), var(--y)) rotate(360deg);
+    }
+  };
+  
+  @layer utilities {
+    .animate-wobble {
+      animation: wobble calc(var(--speed) * var(--t)) linear infinite;
+      transform-origin: -var(--y) -var(--x);
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  @theme inline {
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
+    var(--delay, 0ms);
+
+  @keyframes cell-ripple {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+}
+
+ @keyframes rotate-rainbow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rainbow-btn {
+padding: var(--borderWidth);
+border-radius: var(--borderRadius);
+}
+
+.rainbow-btn::before {
+content: "";
+background: conic-gradient(var(--allColors));
+animation: rotate-rainbow var(--duration) linear infinite;
+filter: blur(var(--blur));
+padding: var(--borderWidth);
+position: absolute;
+inset: -200%;
+z-index: 0;
+}
+
+.btn-content {
+border-radius: var(--borderRadius);
+background-color: var(--bgColor);
+z-index: 10;
+position: relative;
+}
