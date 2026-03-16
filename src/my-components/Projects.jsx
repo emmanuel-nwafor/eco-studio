@@ -10,6 +10,7 @@ import auth from '../assets/auth.jpeg';
 import backend from '../assets/backend_foremade.jpeg';
 import connect from '../assets/connect.jpeg';
 import smart from '../assets/smart-fit.jpeg';
+import wholesalenaija from '../assets/wholesalenaija.png';
 
 // Helper to create URL-friendly IDs for internal routing
 const createSlug = (text) => text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
@@ -55,6 +56,19 @@ export const projects = [
       { icon: 'bx-stats', color: '#006400' },      
       { icon: 'bxl-nodejs', color: '#3C873A' },   
       { icon: 'bx-cloud', color: '#34D399' },    
+    ],
+  },
+{
+    title: "Wholesale Naija",
+    description: "A robust e-commerce marketplace  that connects built with Next.js 15 and TypeScript. It features dynamic category navigation, responsive wholesale product displays, and secure user authentication flows, all optimized for high-performance retail operations.",
+    link: `/project-details/${createSlug("Wholesale Naija")}`, 
+    externalLink: "https://wholesalenaija.com",
+    image: wholesalenaija,
+    techStack: [
+      { icon: 'bxl-react', color: '#61DAFB' },
+      { icon: 'bxl-tailwind-css', color: '#38B2AC' },
+      { icon: 'bxl-typescript', color: '#3178C6' },
+      { icon: 'bxl-nodejs', color: '#339933' },
     ],
   },
   {
