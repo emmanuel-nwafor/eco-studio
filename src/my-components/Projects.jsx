@@ -60,7 +60,7 @@ export const projects = [
   },
 {
     title: "Wholesale Naija",
-    description: "A robust e-commerce marketplace  that connects built with Next.js 15 and TypeScript. It features dynamic category navigation, responsive wholesale product displays, and secure user authentication flows, all optimized for high-performance retail operations.",
+    description: "A strategic B2B2C solution designed to bridge the gap between wholesale stores and retail consumers. Built with Next.js 15 and TypeScript, this platform streamlines high-volume trade by integrating dynamic category logistics and secure authentication, transforming how local inventory reaches the digital market through a high-performance, unified interface.",
     link: `/project-details/${createSlug("Wholesale Naija")}`, 
     externalLink: "https://wholesalenaija.com",
     image: wholesalenaija,
